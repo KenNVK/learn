@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div>
+        <div class="top-bar">
+          <a href="/" id="title-item">
+            <h1>Danh sách khóa học</h1>
+          </a>
+          <a href="#" id="create-link">
+            <span>&#x2795;</span>
+            <span>Tạo khóa học</span>
+          </a>
+        </div>
+        <ul id="list-courses"></ul>
+      </div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-overlay"></div>
+      <div class="modal-body">
+        <form id="post-form">
+          <span class="post-form-close-icon">&times;</span>
+          <h1 id="title-post-form">Đăng khóa học</h1>
+          <div class="form-group">
+            <label>Tên khóa học:</label>
+            <input type="text" name="post-name" id="post-name" placeholder="Nhập tên khóa học" />
+            <span class="form-message"></span>
+          </div>
+          <br />
+          <div class="form-group">
+            <label>Hình ảnh:</label>
+            <input type="text" name="post-image" id="post-image" placeholder="youtube video ID" />
+            <span class="form-message"></span>
+          </div>
+          <br />
+          <div class="form-group">
+            <label>Mô tả:</label><br />
+            <textarea name="post-description"></textarea>
+          </div>
+          <div class="form-btn">
+            <button class="post-btn btn">Đăng khóa học</button>
+          </div>
+        </form>
+
+        <form id="edit-form">
+          <span class="edit-form-close-icon">&times;</span>
+          <h1 id="title-edit-form">Chỉnh sửa khóa học</h1>
+
+          <div class="form-group">
+            <label>Tên khóa học:</label>
+            <input type="text" name="edit-name" placeholder="Nhập tên khóa học" />
+          </div>
+          <br />
+          <div class="form-group">
+            <label>Hình ảnh</label>
+            <input type="text" name="edit-image" placeholder="youtube video ID" />
+          </div>
+          <br />
+          <div class="form-group">
+            <label>Mô tả:</label><br />
+            <textarea name="edit-description"></textarea>
+          </div>
+          <div class="form-btn">
+            <button class="edit-btn btn">Lưu chỉnh sửa</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

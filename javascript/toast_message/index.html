@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Toast Messages</title>
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="toast"></div>
+	<div>
+		<div onclick="showSuccessToast();" class="btn btn--success">Show success message</div>
+		<div onclick="showErrorToast();" class="btn btn--error">Show error message</div>
+	</div>
+</body>
+<script src="main.js"></script>
+<script>
+	function showSuccessToast() {
+		toastMessage({
+			title: 'Thành công!',
+			message: 'Bạn đã đăng ký thành công khóa học.',
+			type: 'success',
+			duration: 4000,
+		});
+	}
+	
+	function showErrorToast() {
+		toastMessage({
+			title: 'Thất bại!',
+			message: 'Có lỗi xảy ra, vui lòng liên hệ quản trị viên.',
+			type: 'error',
+			duration: 4000,
+		});
+	}
+	
+</script>
+
+</html>

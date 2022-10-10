@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "digital7";
+  src: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/11525/digital-7.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  background-color: #a8a8a8;
+}
+
+#cal {
+  display: flex;
+  flex-direction: column;
+  width: 310px;
+  height: auto;
+  margin: 8% auto;
+  background-color: #353535;
+  box-shadow: 1px 1px 10px 3px #353535;
+}
+
+#cal__title {
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+  color: #666;
+  background-color: #131313;
+  text-align: center;
+}
+
+#output {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100px;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  font-family: digital7;
+  color: rgba(255, 255, 255, .75);
+  border-bottom:1px solid #131313;
+}
+
+#output .current-operand {
+  font-size: 50px;
+}
+
+#output .previous-operand {
+  font-size: 30px;
+}
+
+#cal__body {
+  overflow: hidden;
+  flex: 1;
+}
+
+#cal__body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#cal__body button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  height: 60px;
+  flex: 25%;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  color: #999;
+  border: none;
+  background-color: #353535;
+  box-shadow: 0 0 0 1px #131313;
+}
+
+#cal__body button:hover {
+  background-color: rgba(19, 19, 19, 0.7);
+}
+
+#cal__body button.span-two {
+  flex: 50%;
+}
+
+#cal__body .operand-color {
+  background-color: #131313;
+}
+#cal__body .ac-color {
+  background-color: #974006;
+}
+#cal__body button.ac-color:hover {
+  background-color: rgba(241, 110, 22, 0.9);
+}
+

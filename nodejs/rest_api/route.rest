@@ -1,0 +1,30 @@
+GET http://localhost:3000/players/all
+
+###
+
+POST http://localhost:3000/players/create
+Content-Type: application/json
+
+{
+  "name": "kaka",
+  "description": "CAM",
+  "nationality": "Brazil",
+  "slug": "kaka-cam"
+}
+
+###
+
+DELETE  http://localhost:3000/players/delete/[id]
+
+###
+
+PUT http://localhost:3000/players/update/[id]
+Content-Type: application/json
+
+{
+  "name": "kaká"
+}
+
+###
+
+GET http://localhost:3000/players/kaka-cam
